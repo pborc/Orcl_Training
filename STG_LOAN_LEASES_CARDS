@@ -1,0 +1,11 @@
+select * from atomic.STG_LOAN_CONTRACTS; 
+
+info+ atomic.STG_LOAN_CONTRACTS; 
+
+select * from atomic.STG_LEASES_CONTRACTS;
+
+INFO+ atomic.STG_LEASES_CONTRACTS;
+
+select * from atomic.STG_CARDS;
+
+INFO+ atomic.STG_CARDS;
