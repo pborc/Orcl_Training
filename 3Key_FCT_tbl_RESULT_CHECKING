@@ -1,0 +1,5 @@
+#3 Key FCT table to check results
+
+INFO+ atomic.FCT_RECONCILIATION_DIFFERENCE;
+INFO+ atomic.FCT_RECON_ADJUSTMENTS;
+INFO+ atomic.FCT_RECON_CORRECTIONS;
