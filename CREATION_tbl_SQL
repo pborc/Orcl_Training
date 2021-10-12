@@ -1,0 +1,40 @@
+TEST RUN
+
+empid    empname    designation
+-------    -----------   -------------
+12330     Scott        Manager
+10012    King          CEO
+15235    James     Manager
+15323    Kent          CTO
+15124    Scott         CMO
+
+
+create table employeeTUSER5 (
+    employee_id number,
+    employee_name varchar2(50) not null,
+    department_name varchar2(50) not null
+);
+
+alter table employeeTUSER5
+  add  employee_name varchar2(50) not null;
+COMMIT;
+
+select * from employeeTUSER5;
+
+drop table employeeTUSER5;
+
+INSERT ALL
+  INTO employeeTUSER5 (employee_id, employee_name, department_name) VALUES (12330, 'Scott', 'Manager')
+  INTO employeeTUSER5 (employee_id, employee_name, department_name) VALUES (10012 , 'King', 'CEO')
+  INTO employeeTUSER5 (employee_id, employee_name, department_name) VALUES (15235, 'james', 'Manager')
+  Select * from dual;
+
+INSERT ALL
+  INTO employeeTUSER5 (employee_id, employee_name, department_name) VALUES (15323, 'Kent', 'CTO')
+  INTO employeeTUSER5 (employee_id, employee_name, department_name) VALUES (15124  , 'Scott', 'CMO')
+  Select * from dual;
+
+update employeeTUSER5
+    set employee_name = 'James'
+    where employee_id = 15235;
+COMMIT;
