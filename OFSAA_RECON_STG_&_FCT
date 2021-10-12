@@ -1,5 +1,94 @@
-SELECT FIC_MIS_DATE FROM STG_CASA;
-SELECT AS_OF_DATE FROM FSI_D_CASA;
+OFSAA GL RECON    STG and FCT
 
-SELECT V_COMMON_COA_CODE FROM STG_CASA;
-SELECT COMMON_COA_ID FROM FSI_D_CASA
+STG and FSI   
+STG and FSG   
+STG and FCT etc
+
+    INFO+ atomic.STG_GL_DATA;
+                    its PK:   V_LV_CODE
+                              V_GL_CODE
+                              F_CONSOLIDATION_FLAG
+                              V_BRANCH_CODE
+                              V_SCENARIO_CODE
+                              V_CCY_CODE
+                              V_PROD_CODE
+                              V_FINANCIAL_ELEMENT_CODE
+                              V_COMMON_COA_CODE
+                              FIC_MIS_DATE
+                              V_GAAP_CODE
+                              V_ORG_UNIT_CODE
+                              F_IBF_ACCOUNT_IND
+                              V_INTERNAL_CUST_REF_CODE   
+     
+    INFO+ atomic.FCT_GL_DATA;
+                    its PK:  N_MIS_DATE_SKEY
+                             N_ENTITY_SKEY
+                             N_GL_ACCOUNT_SKEY
+                             F_CONSOLIDATION_FLAG
+                             N_BRANCH_SKEY
+                             N_SCENARIO_CD
+                             V_ISO_CURRENCY_CD
+                             N_PRODUCT_SKEY
+                             N_FINANCIAL_ELEM_ID
+                             N_COMMON_COA_SKEY
+                             N_GAAP_SKEY
+                             N_ORG_UNIT_SKEY
+                             N_GL_BOOK_SKEY
+                             F_IBF_ACCOUNT_IND
+                             N_INTERNAL_CUSTOMER_SKEY    
+                            
+    INFO+ atomic.FCT_GL_ADJUSTMENT_ENTRIES;          its PK:  V_ADJ_EXPOSURE_ID 
+                                                     Ref_tbl:    FSI_ADJ_ENTRY_ATTRIBUTES 
+                                                                 FSI_GL_INTERMEDIATE_ADJ_AUTH 
+                                                                 FSI_GL_INTERMEDIATE_CORR_AUTH
+                                                                 
+    INFO+ atomic.FCT_GL_CORRECTION_ENTRIES;          its PK:  N_CORRECTION_ID 
+                                                     Ref_tbl:    FSI_CORR_ENTRY_ATTRIBUTES 
+                                                                 FSI_GL_INTERMEDIATE_CORR_AUTH
+                                                                 
+
+    INFO+ atomic.FCT_GL_ACCOUNT_CASH_FLOWS;
+                                                     its PK:  N_GL_ACCOUNT_CASH_FLOW_SKEY
+                                                              N_RUN_SKEY
+                                                              N_MIS_DATE_SKEY
+                                                              N_RESULT_BUCKET_SKEY   
+                                                              
+                                                              INFO+ atomic.N_GL_ACCOUNT_CASH_FLOW_SKEY;
+                                                              INFO+ atomic.N_RESULT_BUCKET_SKEY ;
+-------                            
+	INFO+ atomic.STG_GL_HIER_INTF;
+    INFO+ atomic.STG_GL_ATTR_INTF;
+    INFO+ atomic.STG_GL_TL_INTF;
+    INFO+ atomic.STG_GL_B_INTF;
+    
+    INFO+ atomic.STG_GL_MASTER;
+    INFO+ atomic.STG_GL_MASTER_MLS;
+    INFO+ atomic.STG_GL_BOOK_MASTER;
+    INFO+ atomic.STG_GL_BOOK_MASTER_MLS;
+    INFO+ atomic.STG_GL_ACCOUNTING_HEAD_MASTER;
+    INFO+ atomic.STG_GL_ACCOUNTING_HEAD_MASTER_MLS;
+    
+    INFO+ atomic.STG_GL_ACCOUNTS;
+    INFO+ atomic.STG_GLCODE_MAP;
+    
+    INFO+ atomic.FCT_GLOBAL_THRESHOLD_BREACHES;
+    INFO+ atomic.FCT_GL_ACCT_CAPITAL_HEAD;
+    INFO+ atomic.FCT_GL_EXECUTION;              
+
+#Acronym
+LCY 
+ACY 
+CCY
+
+IBF
+COA
+GAAP
+GL
+LOB
+
+MTD
+YTD
+ISO
+
+FIC_MIS_DATE 
+DWNLD_DATE
