@@ -1,0 +1,3 @@
+select * from atomic.FCT_COMMON_ACCOUNT_SUMMARY;
+
+INFO+ atomic.FCT_COMMON_ACCOUNT_SUMMARY;
